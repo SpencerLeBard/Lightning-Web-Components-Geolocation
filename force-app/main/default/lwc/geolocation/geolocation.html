@@ -1,0 +1,22 @@
+<template>
+
+  <lightning-card title={strTitle}>
+    <!-- Button for current location -->
+    <lightning-button label="Select" slot="actions" onclick={getLocation}></lightning-button>
+
+    <div if:false={loading}>
+      <p class="slds-p-horizontal_small">Latitude: {location.latitude}</p>
+      <p class="slds-p-horizontal_small">Longitude: {location.longitude}</p>
+
+      <div if:true={showButton}>
+        <center>
+          <lightning-button label="Set to Fields" variant="brand" onclick={setLocation}></lightning-button>
+        </center>
+      </div>
+    </div>
+
+    <div if:true={loading}>
+      <lightning-spinner variant="brand" alternative-text="Loading" size="small"></lightning-spinner>
+    </div>
+  </lightning-card>
+</template>

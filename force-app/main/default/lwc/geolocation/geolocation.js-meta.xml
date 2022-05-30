@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="Geolocation">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="strTitle" type="String" default="Choose Current Location" label="Enter the title for card" />
+            <property name="objectApiName" type="String" label="Enter object api name to set geolocation" />
+            <property name="latFieldApiName" type="String" label="Enter latitude field api name to set latitude" />
+            <property name="longFieldApiName" type="String" label="Enter longitude field api name to set longitude" />
+            <supportedFormFactors>
+                <supportedFormFactor type="Small" />
+                <supportedFormFactor type="Large" />
+            </supportedFormFactors>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
