@@ -19,4 +19,12 @@
       <lightning-spinner variant="brand" alternative-text="Loading" size="small"></lightning-spinner>
     </div>
   </lightning-card>
+  <lightning-map
+  map-markers={mapMarkers}
+  markers-title="Lunch Gems"
+  onmarkerselect={handleMarkerSelect}
+  selected-marker-value={selectedMarkerValue}
+>
+</lightning-map>
+
 </template>

@@ -7,6 +7,6 @@
   ],
   "name": "Geolocation",
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "https://spencerllc-dev-ed.my.salesforce.com",
   "sourceApiVersion": "54.0"
 }
