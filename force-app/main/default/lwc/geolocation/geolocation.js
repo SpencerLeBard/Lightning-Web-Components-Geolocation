@@ -51,7 +51,7 @@ export default class Geolocation extends LightningElement {
     setLocation({
       objectApiName: this.objectApiName,
       location: location,
-      recordId: this.recordId
+      recordId: this.recordId ,
     }).then(() => {
       const evt = new ShowToastEvent({
         title: 'Geolocation set successfully',
@@ -63,16 +63,16 @@ export default class Geolocation extends LightningElement {
     });
   }
 
-  mapMarkers = [
-    {
-        location: {
-            Street: '1 Market St',
-            City: 'San Francisco',
-            Country: 'USA',
-        },
-        title: 'The Landmark Building',
-        description:
-            'Historic <b>11-story</b> building completed in <i>1916</i>',
-    },
-];
+  mapMarkers = []
+//     {
+//         location: {
+//             Street: '1 Market St',
+//             City: 'San Francisco',
+//             Country: 'USA',
+//         },
+//         title: 'The Landmark Building',
+//         description:
+//             'Historic <b>11-story</b> building completed in <i>1916</i>',
+//     },
+// ];
 }
