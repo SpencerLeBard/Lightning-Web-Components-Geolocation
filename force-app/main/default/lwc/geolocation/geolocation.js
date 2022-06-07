@@ -4,6 +4,7 @@ import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 
 export default class Geolocation extends LightningElement {
 
+  @track mapMarkers = []
   @track location = {};
   @track loading = false;
   @track showButton = false;
@@ -52,6 +53,14 @@ export default class Geolocation extends LightningElement {
       objectApiName: this.objectApiName,
       location: location,
       recordId: this.recordId ,
+      mapMarkers : [
+        {
+            location: {
+                Latitude: this.latitude,
+                Longitude: this.longitude, 
+            },
+        },
+    ]
     }).then(() => {
       const evt = new ShowToastEvent({
         title: 'Geolocation set successfully',
@@ -61,9 +70,10 @@ export default class Geolocation extends LightningElement {
       this.dispatchEvent(evt);
       this.loading = false;
     });
+    
   }
 
-  mapMarkers = []
+ 
 //     {
 //         location: {
 //             Street: '1 Market St',
